@@ -1,6 +1,7 @@
 import camelot
 import pandas as pd
 import operator
+
 # For getting DE marks
 print("Your roll number is being read ........",end="")
 tables = camelot.read_pdf('S2BE.pdf', pages='1,2')
@@ -31,28 +32,31 @@ table = tables[1].df
 markCS += table[6].tolist()
 print("Done")
 print("Your marks are being calculated..........",end="")
+
 #Remove unwanted elements
 markCS.remove('Total \n(50)')
 markCS.remove('Total \n(50)')
 del markCS[65]
 
 # For getting DE marks
+
 tables = camelot.read_pdf('S2DE.pdf', pages='1,2,3,4,5,6,7,8,9,10,11')
 markDE=[]
 for i in tables:
     table = i.df
-    #print(table)
+    
     markDE += table[2].tolist()
 
 #Remove unwanted elements
 markDE.remove('Internal\nMark\nRegulatio\nn /50')
 
 # For getting DE marks
+
 tables = camelot.read_pdf('S2EG.pdf', pages='1,2,3')
 markEG=[]
 for i in tables:
     table = i.df
-    #print(table)
+    
     markEG += table[2].tolist()
 
 #Remove unwanted elements
@@ -60,9 +64,7 @@ markEG.remove('')
 markEG.remove('')
 markEG.remove('Final')
 print("Done")
-
-#print((name))
-#print(len(markEG))
+###########################################################
 
 print("\n\nProvide me with your Roll No :")
 roll=int(input())
