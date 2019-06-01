@@ -1,10 +1,10 @@
-*Class Internals*
-*---------------*
+**Class Internals**
+**---------------**
 
 A python script to read marks and roll number and provide the respective internal marks. 
 
-*What you need to make this work*
-*-------------------------------*
+**What you need to make this work**
+**-------------------------------**
 1. Python 2
 2. Camelot: https://github.com/socialcopsdev/camelot (Some fancy stuff to help connect to pdf files.)
 
