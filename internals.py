@@ -67,7 +67,7 @@ print("Done")
 print("\n\nProvide me with your Roll No :")
 roll=int(input())
 
-print("\nYour name and details are provided.\nAs this is a prototype, this might have errors. Contact me for any corrections.\nAlso Chem PDF was not in a readable format, so that is not available.\n")
+print("\nYour name and details are provided.\nAs this is a prototype, this might have errors. Contact me for any corrections.\nAlso Chem PDF was not in a readable format, so that was not available.\n")
 if(roll<=0 or roll >=66):
     print("Go check your roll number please")
 print("Name                 : "+name[roll-1])
