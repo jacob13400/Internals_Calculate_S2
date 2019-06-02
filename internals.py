@@ -8,6 +8,15 @@ markBE=[]
 markCS=[]
 markEG=[]
 markDE=[]
+markBELAB=[]
+markCSLAB=[]
+with open('markCSLAB.data', 'rb') as filehandle:  
+    # read the data as binary data stream
+    markCSLAB = pickle.load(filehandle)
+
+with open('markBELAB.data', 'rb') as filehandle:  
+    # read the data as binary data stream
+    markBELAB = pickle.load(filehandle)
 
 with open('name.data', 'rb') as filehandle:  
     # read the data as binary data stream
@@ -38,7 +47,10 @@ if(roll<=0 or roll >=66):
     print("Go check your roll number please")
 else:
     print("Name                 : "+name[roll-1])
-    print("Computer Science     :"+markCS[roll-1])
+    print("\nTHEORY MARKS:\n---------------------------\nComputer Science     :"+markCS[roll-1])
     print("Diffrential Equation :"+markDE[roll-1])
     print("Basics of Electronics:"+markBE[roll-1])
     print("Engineering Graphics :"+markEG[roll-1])
+    print("\nLAB Marks:\n---------------------------")
+    print("EC LAB :"+markBELAB[roll-1])
+    print("CS LAB :"+markCSLAB[roll-1])
