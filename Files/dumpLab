@@ -1,0 +1,45 @@
+#TO Store LAB details
+
+import xlrd 
+  
+loc = ("./ECLAB.xlsx") 
+  
+wb = xlrd.open_workbook(loc) 
+sheet = wb.sheet_by_index(0) 
+sheet.cell_value(0, 0) 
+l=[]
+  
+for i in range(sheet.nrows): 
+    l.append(sheet.cell_value(i, 6)) 
+
+import pickle
+l.remove('')
+l.remove('')
+l.remove('')
+l.remove('TOTAL (100)')
+l.remove('')
+
+#print(len(l))
+with open('markBELAB.data', 'wb') as filehandle:  
+    # store the data as binary data stream
+    pickle.dump(l, filehandle)
+
+loc = ("./CPLAB.xlsx") 
+  
+wb = xlrd.open_workbook(loc) 
+sheet = wb.sheet_by_index(0) 
+sheet.cell_value(0, 0) 
+l=[]
+  
+for i in range(sheet.nrows): 
+    l.append(str(sheet.cell_value(i, 2))) 
+
+l.remove('')
+l.remove('')
+l.remove('')
+l.remove('Internal Marks (100)')
+print((l))
+with open('markCSLAB.data', 'wb') as filehandle:  
+    # store the data as binary data stream
+    pickle.dump(l, filehandle)
+
