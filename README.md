@@ -14,5 +14,5 @@ A python script to read marks and roll number and provide the respective interna
 
 
 
-**Author's Note :** This is programmed only to accept and display marks of students of CET ,CS '18 class. This has a slight lag, so please bear with it. Any suggestions for improvement is entertained. Futuure updates will include LAB marks as well
+**Author's Note :** This is programmed only to accept and display marks of students of CET ,CS '18 class. This has a slight lag, so please bear with it. Any suggestions for improvement is entertained.
 
